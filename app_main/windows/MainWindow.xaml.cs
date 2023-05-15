@@ -26,7 +26,7 @@ namespace app_main
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static string filePathGlobal = ExcelLoader.filePathSenin;
+        public static string filePathGlobal = ExcelLoader.filePathBokov;
 
         public MainWindow()
         {

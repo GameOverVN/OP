@@ -4,15 +4,41 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:app_main.windows"
-        mc:Ignorable="d">
+        mc:Ignorable="d"
+        d:DesignHeight="500" d:DesignWidth="1000"
+        Title="UserWindow">
+    <Page.Resources>
+        <Style x:Key="ButtonStyleUserWindow" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="#FF3FBEB5" BorderThickness="1" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" Margin="{TemplateBinding Padding}" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+
+
     <Grid Background="#FF63A4CF">
-        <Border Width="350" Height="70">
-            <Button Background="#FF3FBE82" Height="50" FontSize="18" Click="Button_Calculate_Click">Рассчитать/Оформить</Button>
+        <Border Width="350" Height="70" Margin="325,458,325,-28">
+            <Button Style="{DynamicResource ButtonStyleUserWindow}" Background="#FF3FBEB5" Height="50" FontSize="18" Click="Button_Calculate_Click" Foreground="White" Margin="0,10,0,10">Рассчитать/Оформить</Button>
         </Border>
 
         <Frame x:Name="frameCalculate" NavigationUIVisibility="Hidden" Height="600">
 
         </Frame>
+
+        <Border x:Name="Image" Visibility="Visible" CornerRadius="20,20,20,20" Margin="235,29,235,204">
+            <TextBlock Margin="0,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="54" Width="270" Foreground="#FFF4C4C4" HorizontalAlignment="Center" TextAlignment="Center" FontFamily="Dubai Medium" FontSize="16"><Run Text="Каско Осаго"/><LineBreak/><Run Text="Надёжно"/><Run Language="ru-ru" Text="е"/><Run Text=" страхование"/></TextBlock>
+
+            <Border.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="/car-insurance-osago.jpg"/>
+            </Border.Background>
+        </Border>
 
     </Grid>
 </Page>

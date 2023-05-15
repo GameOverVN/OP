@@ -6,15 +6,39 @@
         xmlns:local="clr-namespace:app_main"
         mc:Ignorable="d"
         
-        Title="deleteUserFromDG" Height="230" Width="400" WindowStartupLocation="CenterScreen" WindowStyle="None"> 
+        Title="deleteUserFromDG" Height="230" Width="400" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#FFA2E0F1">
+    <Window.Resources>
+        <Style x:Key="ButtonStyleDeleteUserDelete" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="#FF3FBEB5" BorderThickness="1" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" Margin="{TemplateBinding Padding}" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyleDeleteUserCancel" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="#FFED8585" BorderThickness="1" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" Margin="{TemplateBinding Padding}" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources> 
     <Grid>
         <TextBlock FontSize="30" HorizontalAlignment="Center" Margin="0 30 0 0">ID для удаления:</TextBlock>
         
         <TextBox x:Name="idTextBox"  BorderBrush="black" Width="250" Height="40" FontSize="28"></TextBox>
 
         <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0 0 0 10">
-            <Button Height="50" FontSize="20" Margin="30 0 135 0" Width="100" Click="CancelDelete">Отмена</Button>
-            <Button Height="50" FontSize="20" Width="100" Click="deleteUserFromBD">Удалить</Button>
+            <Button Style="{DynamicResource ButtonStyleDeleteUserCancel}" Height="50" FontSize="20" Margin="30 0 135 0" Width="100" Click="CancelDelete">Отмена</Button>
+            <Button Style="{DynamicResource ButtonStyleDeleteUserDelete}" Height="50" FontSize="20" Width="100" Click="deleteUserFromBD">Удалить</Button>
         </StackPanel>
     </Grid>
 </Window>

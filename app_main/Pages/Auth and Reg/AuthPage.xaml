@@ -7,6 +7,31 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       Title="AuthPage" Height="500" Width="1000">
+    <Page.Resources>
+        <Style x:Key="ButtonStyleAuthEnter" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="#FF63A4CF" BorderThickness="1" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" Margin="{TemplateBinding Padding}" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyleAuthReg" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="#FF63A4CF" BorderThickness="1" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" Margin="{TemplateBinding Padding}" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
     <Grid Background="#FFA2E0F1">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -44,10 +69,10 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Border Grid.Row="0"  Margin="0 0 35 0"  Width="100" Height="30" Grid.Column="0">
-                <Button Background="#FF63A4CF" FontSize="16" FontFamily="Consolas" Click="Button_Auth_Click" Margin="0,0,0,-2">Войти</Button>
+                <Button Style="{DynamicResource ButtonStyleAuthEnter}" Background="#FF63A4CF" FontSize="16" FontFamily="Consolas" Click="Button_Auth_Click" Margin="0,0,0,-2">Войти</Button>
             </Border>
             <Border Grid.Column="1" Margin="30 0 0 0"  Width="100" Height="30">
-                <Button Background="#FF63A4CF" FontSize="16" FontFamily="Consolas" Click="Button_Reg_Click" Margin="-13,0,-23,-2">Регистрация</Button>
+                <Button Style="{DynamicResource ButtonStyleAuthReg}" Background="#FF63A4CF" FontSize="16" FontFamily="Consolas" Click="Button_Reg_Click" Margin="-13,0,-23,-2">Регистрация</Button>
             </Border>
         </Grid>
         <TextBlock Padding="10 " FontSize="16" RenderTransformOrigin="0.5,0.506" Grid.Column="2" Grid.ColumnSpan="4" Margin="20,24,30,56" Grid.Row="2" Grid.RowSpan="2" FontFamily="Cascadia Code" Foreground="#FF3B2048"><Run Text="Логин"/></TextBlock>

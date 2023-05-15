@@ -6,7 +6,31 @@
       xmlns:local="clr-namespace:app_main.Pages.Buy_Page"
       mc:Ignorable="d" 
       d:DesignHeight="400" d:DesignWidth="1000"
-      Title="OwnerPage">
+      Title="OwnerPage" Width="1000">
+    <Page.Resources>
+        <Style x:Key="ButtonStyleOwnerNext" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="#FF3FBEB5" BorderThickness="1" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" Margin="{TemplateBinding Padding}" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyleOwnerBack" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="#FF2B69A9" BorderThickness="1" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" Margin="{TemplateBinding Padding}" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
 
     <Grid Background="#FF63A4CF">
         <Grid.ColumnDefinitions>
@@ -65,11 +89,11 @@
                 <ColumnDefinition Width="429*"></ColumnDefinition>
                 <ColumnDefinition Width="143*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Border Width="40" Height="40" Grid.ColumnSpan="2" Margin="51,15,52,15"/>
-            <Border Grid.Column="3" Width="80" Height="40" Margin="32,15,31,15">
-                <Button FontSize="16" Background="#FF3FBE82" Click="Button_NextPage_Click">Далее</Button>
+            <Border Width="40" Height="40" Grid.ColumnSpan="2" Margin="48,15,54,15"/>
+            <Border Grid.Column="2" Width="80" Height="40" Margin="360,10,132,20" Grid.ColumnSpan="2">
+                <Button Style="{DynamicResource ButtonStyleOwnerNext}" FontSize="16" Background="#FF3FBE82" Click="Button_NextPage_Click" Foreground="White">Далее</Button>
             </Border>
-            <Button Content="v"  FontSize="30"   RenderTransformOrigin="0.5,0.5" Click="Button_PreviousPage_Click" Height="50" Margin="13,12,22,8" Width="47" Grid.Column="1">
+            <Button Style="{DynamicResource ButtonStyleOwnerBack}" Content="v"  FontSize="30"   RenderTransformOrigin="0.5,0.5" Click="Button_PreviousPage_Click" Height="50" Margin="82,3,0,17" Width="47" Grid.Column="1" HorizontalAlignment="Left" Grid.ColumnSpan="2" Foreground="White">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>

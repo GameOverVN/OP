@@ -24,6 +24,8 @@ namespace app_main {
     /// Логика взаимодействия для UsersControl.xaml
     /// </summary>
     public partial class UsersControl : Page, INotifyPropertyChanged{
+
+        public static string filePathGlobal = ExcelLoader.filePathBokov;
         public UsersControl() {
             InitializeComponent();
             DataGridUsers.ItemsSource = users;
@@ -51,7 +53,7 @@ namespace app_main {
 
        
         private static ObservableCollection<User> getUsers() {
-            FileInfo filePath = new FileInfo(@"C:\Users\User\Desktop\bmstu\1.2\praktika_program\app_main\excelTables\Users.xlsx");
+            FileInfo filePath = new FileInfo($"{filePathGlobal}Users.xlsx");
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             using (var package = new ExcelPackage(filePath)) {
                 var usersList = package.Workbook.Worksheets["Users"];

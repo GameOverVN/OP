@@ -30,6 +30,7 @@ namespace app_main.windows
 
         private void Button_Calculate_Click(object sender, RoutedEventArgs e)
         {
+            Image.Visibility = Visibility.Collapsed;
             frameCalculate.Navigate(new CalculatePage());
         }
 

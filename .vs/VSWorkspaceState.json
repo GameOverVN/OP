@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\app_main",
-    "\\app_main\\Pages",
-    "\\app_main\\Pages\\Buy Page",
-    "\\app_main\\windows"
+    ""
   ],
-  "SelectedNode": "\\app_main\\Pages\\Buy Page\\DriverPage.xaml.cs",
+  "SelectedNode": "\\app_main.sln",
   "PreviewInSolutionExplorer": false
 }

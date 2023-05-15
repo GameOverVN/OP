@@ -26,6 +26,9 @@ namespace app_main.Pages.Buy_Page {
     /// Логика взаимодействия для mainBuyPage.xaml
     /// </summary>
     public partial class mainBuyPage : Page {
+
+        public static string filePathGlobal = ExcelLoader.filePathBokov;
+
         public OwnerPage OwnerPage;
         public DateTime DateTime { get; set; }
         public mainBuyPage(OwnerPage ownerPage) {
@@ -58,7 +61,7 @@ namespace app_main.Pages.Buy_Page {
             var font = new iTextSharp.text.Font(baseFont, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL);
             string fileName = $"{OwnerPage.textBoxSurname.Text}{OwnerPage.textBoxName.Text}{OwnerPage.textBoxMiddleName.Text}";
             Document document = new Document();
-            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream($"C:\\Users\\User\\Desktop\\bmstu\\1.2\\praktika_program\\app_main\\pdfDocuments\\{fileName}.pdf", FileMode.OpenOrCreate));
+            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream($"C:\\Code\\Praktika\\pdfDocuments\\{fileName}.pdf", FileMode.OpenOrCreate));
             document.Open();
             string str = $"{OwnerPage.textBoxSurname.Text} {OwnerPage.textBoxName.Text} {OwnerPage.textBoxMiddleName.Text}, дата рождения: {OwnerPage.textBoxAge.Text}";
 
@@ -84,7 +87,7 @@ namespace app_main.Pages.Buy_Page {
             writer.Close();
         }
         public void setBuyerToExcel(Buyer buyer) {
-            FileInfo filePath = new FileInfo(@"C:\Users\User\Desktop\practice\excelTables\Buyers.xlsx");
+            FileInfo filePath = new FileInfo($"{filePathGlobal}Buyers.xlsx");
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             using (ExcelPackage buyerPackage = new ExcelPackage(filePath)) {
 

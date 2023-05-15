@@ -6,19 +6,43 @@
         xmlns:local="clr-namespace:app_main"
         mc:Ignorable="d"
         Title="AdminWindow" Height="600" Width="1000">
+    <Page.Resources>
+        <Style x:Key="ButtonStyleAdminUsers" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="#FF3FBEB5" BorderThickness="1" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" Margin="{TemplateBinding Padding}" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyleAdminData" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="#FF3FBEB5" BorderThickness="1" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" Margin="{TemplateBinding Padding}" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition MaxWidth="150" Width="150"></ColumnDefinition>
             <ColumnDefinition Width="850"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="0" Background="#FF333232" Orientation="Vertical" >
+        <StackPanel Grid.Row="0" Background="#FF63A4CF" Orientation="Vertical" >
 
             <Border Margin="10 5 0 5" Height="30"  HorizontalAlignment="Left" VerticalAlignment="Top">
-                <Button BorderThickness="0" Background="#FF333232"  Foreground="White" Content="Пользователи" Click="Button_UsersControl_Click" FontSize="14" FontFamily="Franklin Gothic Demi Cond"/>
+                <Button Style="{DynamicResource ButtonStyleAdminUsers}" BorderThickness="0" Background="#FF333232"  Foreground="White" Content="Пользователи" Click="Button_UsersControl_Click" FontSize="14" FontFamily="Franklin Gothic Demi Cond"/>
 
             </Border>
             <Border Margin="10 0 0 0" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top">
-                <Button BorderThickness="0" Background="#FF333232" Foreground="White" FontSize="14" FontFamily="Franklin Gothic Demi Cond" Content="Данные" Click="Button_DataChange_Click">
+                <Button Style="{DynamicResource ButtonStyleAdminData}" BorderThickness="0" Background="#FF333232" Foreground="White" FontSize="14" FontFamily="Franklin Gothic Demi Cond" Content="Данные" Click="Button_DataChange_Click">
 
                 </Button>
 

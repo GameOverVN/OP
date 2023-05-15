@@ -21,7 +21,7 @@
                     <Setter Property="Margin" Value="10,0,0,0"/>
                 </Style>
             </StackPanel.Resources>
-            <Button Click="Button_CloseMessageBox" Content="ОК" Background="#FF63A4CF" Margin="112,0,0,0" Foreground="White" Height="30" Width="68">
+            <Button Click="Button_CloseMessageBox" Content="ОК" Background="#FF63A4CF" Margin="112,0,0,0" Foreground="White" Height="30" Width="68" BorderBrush="#FF4690D2">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10"></Setter>

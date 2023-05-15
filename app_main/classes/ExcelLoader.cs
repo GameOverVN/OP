@@ -12,7 +12,7 @@ using OfficeOpenXml;
 namespace app_main.classes {
      class ExcelLoader {
         public static string filePathSenin = @"C:\Users\User\Desktop\bmstu\1.2\praktika_program\app_main\excelTables\";
-        public static string filePathBokov = "";
+        public static string filePathBokov = @"C:\Code\Praktika\excelTables\";
         public void LoadExcel() {
             
             FileInfo filePath = new FileInfo(@"C:\Users\User\Desktop\bmstu\1.2\praktika_program\app_main\excelTables\Cars.xlsx");

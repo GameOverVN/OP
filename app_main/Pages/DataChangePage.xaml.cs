@@ -1,4 +1,5 @@
 ﻿using app_main.classes;
+using app_main.Properties;
 using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,8 @@ namespace app_main.Pages {
     /// Логика взаимодействия для DataChangePage.xaml
     /// </summary>
     public partial class DataChangePage : Page, INotifyPropertyChanged {
+
+        public static string filePathGlobal = ExcelLoader.filePathBokov;
 
         public int BasicRate {get;set;}
         public DataChangePage() {
@@ -61,7 +64,7 @@ namespace app_main.Pages {
         }
         public int loadBasicRateFromExcel() {
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
-            FileInfo filePath = new FileInfo(@"C:\Users\User\Desktop\bmstu\1.2\praktika_program\app_main\excelTables\Settings.xlsx");
+            FileInfo filePath = new FileInfo($"{filePathGlobal}Settings.xlsx");
             using (ExcelPackage package = new ExcelPackage(filePath)) {
                 var settingsList = package.Workbook.Worksheets["Settings"];
 
@@ -73,7 +76,7 @@ namespace app_main.Pages {
         }
         private void loadBasicRateToExcel() {
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
-            FileInfo filePath = new FileInfo(@"C:\Users\User\Desktop\bmstu\1.2\praktika_program\app_main\excelTables\Settings.xlsx");
+            FileInfo filePath = new FileInfo($"{filePathGlobal}Settings.xlsx");
             using (ExcelPackage package = new ExcelPackage(filePath)) {
                 var settingsList = package.Workbook.Worksheets["Settings"];
 

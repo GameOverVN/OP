@@ -30,11 +30,33 @@ namespace app_main.Pages.Buy_Page {
             buyPage.getbackButton.Visibility = Visibility.Collapsed;
         }
 
+        public string getCarPassort()
+        {
+            if (textBoxCarPassport.Text != "")
+            {
+                return textBoxCarPassport.Text;
+            }
+            else
+            {
+                return null;
+            }
+            
+        }
+
         private void Button_PreviousCarPage_Click(object sender, RoutedEventArgs e) {
             buyPage.openPage(buyPages.car);
         }
         private void Button_NextOwnerPage_Click(object sender, RoutedEventArgs e) {
-            buyPage.frameBuyPage.Navigate(new OwnerPage(this));
+            if(getCarPassort() == null)
+            {
+                TextBlockEmptyCarPassport.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                TextBlockEmptyCarPassport.Visibility = Visibility.Hidden;
+                buyPage.frameBuyPage.Navigate(new OwnerPage(this));
+            }
+            
         }
 
         private void initInfoAboutDriver() {
@@ -46,28 +68,7 @@ namespace app_main.Pages.Buy_Page {
             checkBoxPolicyholder.Content = $"{Driver.Name} {Driver.Surname} - собственник транспортного средства";
             
         }
-        public string getCarPassort() {
-            if (textBoxCarPassport.Text!="") {
-                return textBoxCarPassport.Text;
+        
 
-            }
-            return null;
-        }
-
-        private void Button_AddDriver_Click(object sender, RoutedEventArgs e) {
-            int amountOfDrivers = Convert.ToInt32(buyPage.calculatePage.driversTextBox.Text);
-            int startAmount = 1;
-            if  (startAmount == amountOfDrivers) {
-                MessageBox.Show($"Добавление невозможно. Максимальное количество водителей - {amountOfDrivers}");
-            }
-
-
-            while (startAmount<amountOfDrivers) {
-                startAmount++;
-                DriverPage page = new DriverPage(buyPage);
-                MessageBox.Show($"Добавлен водитель {startAmount}");
-            }
-
-        }
     }
 }

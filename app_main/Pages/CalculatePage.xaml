@@ -4,8 +4,45 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:app_main.Pages"
-      mc:Ignorable="d" 
-      Title="CalculatePage">
+      mc:Ignorable="d"
+      d:DesignHeight="500" d:DesignWidth="1000"
+
+      Title="CalculatePage" Width="1000">
+    <Page.Resources>
+        <Style x:Key="ButtonStyleCalculate" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="#FF3FBEB5" BorderThickness="1" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" Margin="{TemplateBinding Padding}" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyleBuyClose" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="#FFB54C3F" BorderThickness="1" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" Margin="{TemplateBinding Padding}" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyleBuy" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="#FF3FBEB5" BorderThickness="1" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" Margin="{TemplateBinding Padding}" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
 
     <Grid  Background="#FF63A4CF">
         <Grid x:Name="MainGrid">
@@ -65,15 +102,15 @@
                             </Grid.ColumnDefinitions>
                             <StackPanel Grid.Column="0">
                                 <TextBlock FontSize="15" Padding="0 0" FontFamily="Gadugi" Foreground="#FF3B2048">Фамилия</TextBlock>
-                                <TextBox x:Name="surnameTextBox" PreviewTextInput="surnameTextBox_PreviewTextInput" Width="130" Height="25" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="#FFD9D1D1" BorderBrush="#FF919192"></TextBox>
+                                <TextBox x:Name="surnameTextBox" PreviewTextInput="surnameTextBox_PreviewTextInput" Width="130" Height="25" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="White" BorderBrush="#FF919192"></TextBox>
                             </StackPanel>
                             <StackPanel Grid.Column="1">
                                 <TextBlock FontSize="15" Padding="0 0" FontFamily="Gadugi" Foreground="#FF3B2048">Имя</TextBlock>
-                                <TextBox x:Name="nameTextBox" PreviewTextInput="nameTextBox_PreviewTextInput" Width="130" Height="25" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="#FFD9D1D1" BorderBrush="#FF919192"></TextBox>
+                                <TextBox x:Name="nameTextBox" PreviewTextInput="nameTextBox_PreviewTextInput" Width="130" Height="25" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="White" BorderBrush="#FF919192"></TextBox>
                             </StackPanel>
                             <StackPanel Grid.Column="2">
                                 <TextBlock FontSize="15" Padding="0 0" FontFamily="Gadugi" Foreground="#FF3B2048">Отчество</TextBlock>
-                                <TextBox x:Name="middlenameTextBox" PreviewTextInput="middlenameTextBox_PreviewTextInput" Width="128" Height="25" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="#FFD9D1D1" BorderBrush="#FF919192"></TextBox>
+                                <TextBox x:Name="middlenameTextBox" PreviewTextInput="middlenameTextBox_PreviewTextInput" Width="128" Height="25" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="White" BorderBrush="#FF919192"></TextBox>
                             </StackPanel>
 
 
@@ -90,11 +127,11 @@
                             </StackPanel>
                             <StackPanel Grid.Column="1" Margin="10 0 0 0">
                                 <TextBlock FontSize="15" Padding="0 0" FontFamily="Gadugi" Foreground="#FF3B2048">Стаж</TextBlock>
-                                <TextBox  x:Name="experienceTextBox" PreviewTextInput="experienceTextBox_PreviewTextInput" Width="100" Height="23" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="#FFD9D1D1" BorderBrush="#FF919192"></TextBox>
+                                <TextBox  x:Name="experienceTextBox" PreviewTextInput="experienceTextBox_PreviewTextInput" Width="100" Height="23" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="White" BorderBrush="#FF919192"></TextBox>
                             </StackPanel>
                             <StackPanel Grid.Column="2" Margin="10 0 0 0">
                                 <TextBlock FontSize="15" Padding="0 0" FontFamily="Gadugi" Foreground="#FF3B2048">ДТП за последний год</TextBlock>
-                                <TextBox  x:Name="amountOfAccidentsTextBox" PreviewTextInput="amountOfAccidentsTextBox_PreviewTextInput" Width="165" Height="23" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="#FFD9D1D1" BorderBrush="#FF919192"></TextBox>
+                                <TextBox  x:Name="amountOfAccidentsTextBox" PreviewTextInput="amountOfAccidentsTextBox_PreviewTextInput" Width="165" Height="23" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="White" BorderBrush="#FF919192"></TextBox>
 
                             </StackPanel>
                         </Grid>
@@ -110,14 +147,14 @@
                             </StackPanel>
                             <StackPanel Grid.Column="1" Margin="10 0 0 0">
                                 <TextBlock FontSize="15" Padding="0 0" FontFamily="Gadugi" Foreground="#FF3B2048">Количество водителей</TextBlock>
-                                <TextBox x:Name="driversTextBox" PreviewTextInput="driversTextBox_PreviewTextInput" Width="190" Height="23" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="#FFD9D1D1" BorderBrush="#FF919192"></TextBox>
+                                <TextBox x:Name="driversTextBox" PreviewTextInput="driversTextBox_PreviewTextInput" Width="190" Height="23" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="White" BorderBrush="#FF919192"></TextBox>
                             </StackPanel>
 
                         </Grid>
                         <StackPanel Orientation="Horizontal">
                             <StackPanel >
                                 <TextBlock FontSize="15" Padding="0 0" FontFamily="Gadugi" Height="23" Foreground="#FF3B2048"><Run Text="Гос. номер автомобиля"/></TextBlock>
-                                <TextBox x:Name="regnumTextBox" PreviewTextInput="regnumTextBox_PreviewTextInput" Width="250" Height="25"  Background="#FFD9D1D1" BorderBrush="#FF919192"/>
+                                <TextBox x:Name="regnumTextBox" PreviewTextInput="regnumTextBox_PreviewTextInput" Width="250" Height="25"  Background="White" BorderBrush="#FF919192"/>
                             </StackPanel>
                             <StackPanel VerticalAlignment="Center">
                                 <RadioButton x:Name="osagoBtn" IsChecked="true" Checked="RadioButton_Checked" Content="ОСАГО"/>
@@ -134,14 +171,14 @@
 
             <Grid x:Name="buttonGrid"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="8">
                 <Border Panel.ZIndex="10" CornerRadius="2">
-                    <Button x:Name="calculate" Click="Button_Calculate_Click"  Height="50" Content="Рассчитать" FontSize="20" Background="#FF3FBE82" Foreground="White" FontFamily="Candara Light" Margin="440,25,425,25"/>
+                    <Button Style="{DynamicResource ButtonStyleCalculate}" x:Name="calculate" Click="Button_Calculate_Click"  Height="50" Content="Рассчитать" FontSize="20" Background="#FF3FBE82" Foreground="White" FontFamily="Candara Light" Margin="440,25,425,25"/>
                 </Border>
                 <TextBlock x:Name="TextBlockNoDriverInfo" Foreground="red" Visibility="Hidden" TextWrapping="Wrap" Text="Заполните все поля информации о водителе" Margin="362,0,-154,80" FontSize="14"/>
 
             </Grid>
           
         </Grid>
-        <Grid x:Name="totalPriceGrid" Width="400" Height="200" Visibility="Collapsed" Background="#FF3FBEB9" >
+        <Grid x:Name="totalPriceGrid" Width="400" Height="200" Visibility="Collapsed" Background="#FFA2E0F1" >
 
             <StackPanel Margin="10 30 10 100" >
                 <TextBlock x:Name="totalPriceTB" HorizontalAlignment="Center" >
@@ -151,10 +188,10 @@
 
             <StackPanel Orientation="Horizontal" Margin="0 80 0 0">
                 <Border Width="100" Height="50" Margin="40 0 100 0">
-                    <Button FontSize="18" Click="Button_CalculateTotalClose_Click" Background="#FFB54C3F" Margin="0,9,-7,9">Закрыть</Button>
+                    <Button Style="{DynamicResource ButtonStyleBuyClose}" FontSize="18" Click="Button_CalculateTotalClose_Click" Background="#FFB54C3F" Margin="0,9,-7,9" Foreground="White">Закрыть</Button>
                 </Border>
                 <Border Width="100" Height="50" >
-                    <Button FontSize="18" Click="Button_Buy_Click" Background="#FF3FBE82">Купить</Button>
+                    <Button Style="{DynamicResource ButtonStyleBuy}" FontSize="18" Click="Button_Buy_Click" Background="#FF3FBE82" Foreground="White">Купить</Button>
                 </Border>
             </StackPanel>
 

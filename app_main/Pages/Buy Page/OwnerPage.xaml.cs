@@ -79,6 +79,7 @@ namespace app_main.Pages.Buy_Page {
             return null;
         }
 
+
         private void Button_PreviousPage_Click(object sender, RoutedEventArgs e) {
            
             NavigationService navigation = NavigationService.GetNavigationService(this);
@@ -87,7 +88,15 @@ namespace app_main.Pages.Buy_Page {
         }
 
         private void Button_NextPage_Click(object sender, RoutedEventArgs e) {
-            NavigationService.Navigate(new mainBuyPage(this));
+            if(getPassport() == null && getEmail() == null && getAdress() == null)
+            {
+                CustomMessageBox messageBox = new CustomMessageBox("Заполните все поля");
+                messageBox.Show();
+            }
+            else
+            {
+                NavigationService.Navigate(new mainBuyPage(this));
+            }
         }
         public Buyer createBuyer() {
             var driver = CalculatePage.Driver;
