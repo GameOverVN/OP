@@ -35,7 +35,7 @@ namespace app_main
         }
         public enum pages
         {
-            login, regin, userWindow
+            login, regin, userWindow, admin
         }
 
 
@@ -77,6 +77,9 @@ namespace app_main
             }
             else if (pages == pages.userWindow) {
                 frameMainWindow.Navigate(new UserWindow(this));
+            }
+            else if (pages == pages.admin) {
+                frameMainWindow.Navigate(new AdminWindow(this));
             }
         }
 

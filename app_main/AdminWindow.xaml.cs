@@ -19,8 +19,10 @@ namespace app_main {
     /// <summary>
     /// Логика взаимодействия для AdminWindow.xaml
     /// </summary>
-    public partial class AdminWindow : Window {
-        public AdminWindow() {
+    public partial class AdminWindow : Page {
+        public MainWindow MainWindow { get; set; }
+        public AdminWindow(MainWindow mainWindow) {
+            MainWindow = mainWindow;
             InitializeComponent();
             
         }

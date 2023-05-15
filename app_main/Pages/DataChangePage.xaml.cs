@@ -46,12 +46,12 @@ namespace app_main.Pages {
         }
         private void ConfirmChangeRatio(object sender, RoutedEventArgs e) {
             try {
-                //int ratio = Convert.ToInt32(textBoxChangeRatio.Text);
-                //BasicRate = ratio;
+                int ratio = Convert.ToInt32(textBoxChangeRatio.Text);
+                BasicRate = ratio;
                 loadBasicRateToExcel();
                 textBoxChangeRatio.Visibility = Visibility.Collapsed;
                 buttonConfirm.Visibility = Visibility.Collapsed;
-                
+                TextBlockRatio.Text = BasicRate.ToString();
             }
             catch (Exception ex) {
 
@@ -81,7 +81,7 @@ namespace app_main.Pages {
 
                 settingsList.Cells["B1"].Value = rate;
 
-                
+                package.Save();
             }
         }
 

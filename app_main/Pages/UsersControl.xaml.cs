@@ -78,39 +78,44 @@ namespace app_main {
         private void deleteUserDG_Click(object sender, RoutedEventArgs e) {
             deleteUserFromDG idWindow = new deleteUserFromDG();
             idWindow.ShowDialog();
-
-            int id = Convert.ToInt32(idWindow.idTextBox.Text);
-
-            var idList = new List<int>();
-            foreach (var user in users) {
-                idList.Add(user.ID);
+            if (idWindow.idTextBox.Text=="") {
+                idWindow.Close();
             }
-            if (idList.Contains(id)) {
-                foreach (var user in users.ToArray()) {
-                    if (user.ID == id) {
-                        try {
-                            users.Remove(user);
+            else {
+                int id = Convert.ToInt32(idWindow.idTextBox.Text);
 
-                        }
-                        catch (Exception ex) {
+                var idList = new List<int>();
+                foreach (var user in users) {
+                    idList.Add(user.ID);
+                }
+                if (idList.Contains(id)) {
+                    foreach (var user in users.ToArray()) {
+                        if (user.ID == id) {
+                            try {
+                                users.Remove(user);
 
-                            MessageBox.Show(ex.Message);
+                            }
+                            catch (Exception ex) {
+
+                                MessageBox.Show(ex.Message);
+                            }
                         }
                     }
                 }
+                else {
+                    MessageBox.Show("Указанный пользователь не найден");
+                }
+                ExcelLoader excelLoader = new ExcelLoader();
+                excelLoader.SetUsersToExcel(users);
+
+                idWindow.Close();
+
             }
-            else {
-                MessageBox.Show("Указанный пользователь не найден");
-            }
-            ExcelLoader excelLoader = new ExcelLoader();
-            excelLoader.SetUsersToExcel(users);
-
-            idWindow.Close();
 
 
 
 
-            
+
         }
 
     }

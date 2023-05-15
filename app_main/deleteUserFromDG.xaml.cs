@@ -34,6 +34,10 @@ namespace app_main {
         
         private void deleteUserFromBD(object sender, RoutedEventArgs e) {
             var users = MainWindow.getUsers();
+            if (idTextBox.Text=="") {
+                MessageBox.Show("Заполните поле");
+            }
+            else {
 
             int id = Convert.ToInt32(idTextBox.Text);
             var idList =new List<int>();
@@ -57,13 +61,13 @@ namespace app_main {
             else {
                 MessageBox.Show("Указанный пользователь не найден");
             }
-            AdminWindow adminWindow = new AdminWindow();
-            adminWindow.usersRefresh();
+
             ExcelLoader excelLoader = new ExcelLoader();
             excelLoader.SetUsersToExcel(users);
 
             Close();
 
+            }
 
         }
 

@@ -77,8 +77,7 @@ namespace app_main.Pages.Auth_and_Reg
             if ((getLogin() == Arrays.getAdminLogin() && getPassword() == Arrays.getAdminPassword()))
             {
 
-                AdminWindow adminWindow = new AdminWindow();
-                adminWindow.Show();
+                mainWindow.OpenPage(MainWindow.pages.admin);
             }
             else if (userExists)
             {
