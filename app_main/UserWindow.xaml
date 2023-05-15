@@ -1,0 +1,18 @@
+﻿<Page x:Class="app_main.windows.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:app_main.windows"
+        mc:Ignorable="d">
+    <Grid Background="#FF63A4CF">
+        <Border Width="350" Height="70">
+            <Button Background="#FF3FBE82" Height="50" FontSize="18" Click="Button_Calculate_Click">Рассчитать/Оформить</Button>
+        </Border>
+
+        <Frame x:Name="frameCalculate" NavigationUIVisibility="Hidden" Height="600">
+
+        </Frame>
+
+    </Grid>
+</Page>

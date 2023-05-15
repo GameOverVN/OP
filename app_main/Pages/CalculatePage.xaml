@@ -1,0 +1,164 @@
+﻿<Page x:Class="app_main.Pages.CalculatePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:app_main.Pages"
+      mc:Ignorable="d" 
+      Title="CalculatePage">
+
+    <Grid  Background="#FF63A4CF">
+        <Grid x:Name="MainGrid">
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="titleGrid" Grid.Column="0" Grid.ColumnSpan="8">
+                <TextBlock Text="Калькулятор страховки" FontSize="30" Padding="0 25 0 0" TextAlignment="Center" HorizontalAlignment="Center" FontFamily="Consolas" />
+            </Grid>
+            <Grid  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3">
+                <Border BorderThickness="1" BorderBrush="Black" Margin="10,0,41,0">
+                    <StackPanel>
+                        <TextBlock FontSize="20" FontWeight="DemiBold" HorizontalAlignment="Center" FontFamily="Gadugi" Foreground="#FF3B2048">Информация об авто</TextBlock>
+                        <Grid Margin="0 10 0 0"></Grid>
+                        <TextBlock FontSize="15" Padding="50 0" FontFamily="Gadugi" Foreground="#FF3B2048">Марка</TextBlock>
+                        <ComboBox x:Name="brandCombobox" Style="{DynamicResource ComboBoxStyle1}" IsEditable="False" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" Width="150" Height="20" HorizontalAlignment="Left" Margin="50 5 0 20">
+                        </ComboBox>
+                        <TextBlock FontSize="15" Padding="50 0" FontFamily="Gadugi" Foreground="#FF3B2048">Модель</TextBlock>
+                        <ComboBox x:Name="modelCombobox" Style="{DynamicResource ComboBoxStyle1}"  IsEditable="False" Width="150" Height="20" HorizontalAlignment="Left" Margin="50 5 0 20"  Background="#FFD9D1D1" BorderBrush="#FF919192"></ComboBox>
+                        <TextBlock FontSize="15" Padding="50 0" FontFamily="Gadugi" Foreground="#FF3B2048">Мощность двигателя</TextBlock>
+                        <ComboBox x:Name="powerCombobox" Style="{DynamicResource ComboBoxStyle1}" Width="150" Height="20" HorizontalAlignment="Left" Margin="50 5 0 20"  Background="#FFD9D1D1" BorderBrush="#FF919192"></ComboBox>
+                        <TextBlock FontSize="15" Padding="50 0" Foreground="#FF3B2048">Год выпуска</TextBlock>
+                        <ComboBox  x:Name="releaseYearCombobox" Style="{DynamicResource ComboBoxStyle1}" Width="150" Height="20" HorizontalAlignment="Left" Margin="50 5 0 20"  Background="#FFD9D1D1" BorderBrush="#FF919192"></ComboBox>
+                    </StackPanel>
+                </Border>
+                <TextBlock x:Name="TextBlockNoMark" Foreground="red" Visibility="Hidden" TextWrapping="Wrap" Text="Поле пустое" Margin="219,65,85,220"/>
+                <TextBlock x:Name="TextBlockNoModel" Foreground="red" Visibility="Hidden" TextWrapping="Wrap" Text="Поле пустое" Margin="219,128,85,154"/>
+                <TextBlock x:Name="TextBlockNoPower" Foreground="red" Visibility="Hidden" TextWrapping="Wrap" Text="Поле пустое" Margin="219,194,85,90"/>
+                <TextBlock x:Name="TextBlockNoYear" Foreground="red" Visibility="Hidden" TextWrapping="Wrap" Text="Поле пустое" Margin="219,259,85,26"/>
+            </Grid>
+
+            <Grid Margin="0 0 70 0" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="5" Grid.RowSpan="3">
+                <Border BorderThickness="1" BorderBrush="Black" Padding="5">
+                    <StackPanel x:Name="stackPanel_driver" Margin="0,0,0,4">
+                        <TextBlock FontSize="20" FontWeight="DemiBold" HorizontalAlignment="Center" FontFamily="Gadugi" Foreground="#FF3B2048">Информация о водителе</TextBlock>
+
+                        <Grid Margin="0 10 0 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <TextBlock FontSize="15" Padding="0 0" FontFamily="Gadugi" Foreground="#FF3B2048">Фамилия</TextBlock>
+                                <TextBox x:Name="surnameTextBox" PreviewTextInput="surnameTextBox_PreviewTextInput" Width="130" Height="25" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="#FFD9D1D1" BorderBrush="#FF919192"></TextBox>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1">
+                                <TextBlock FontSize="15" Padding="0 0" FontFamily="Gadugi" Foreground="#FF3B2048">Имя</TextBlock>
+                                <TextBox x:Name="nameTextBox" PreviewTextInput="nameTextBox_PreviewTextInput" Width="130" Height="25" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="#FFD9D1D1" BorderBrush="#FF919192"></TextBox>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2">
+                                <TextBlock FontSize="15" Padding="0 0" FontFamily="Gadugi" Foreground="#FF3B2048">Отчество</TextBlock>
+                                <TextBox x:Name="middlenameTextBox" PreviewTextInput="middlenameTextBox_PreviewTextInput" Width="128" Height="25" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="#FFD9D1D1" BorderBrush="#FF919192"></TextBox>
+                            </StackPanel>
+
+
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="130"></ColumnDefinition>
+                                <ColumnDefinition Width="110"></ColumnDefinition>
+                                <ColumnDefinition ></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <TextBlock FontSize="15" Padding="0 0" FontFamily="Gadugi" Foreground="#FF3B2048">Год рождения</TextBlock>
+                                <ComboBox  x:Name="ageComboBox" Style="{DynamicResource ComboBoxStyle1}" MaxDropDownHeight="120" IsEditable="False" Width="130" Height="23" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="#FFD9D1D1" BorderBrush="#FF919192"></ComboBox>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Margin="10 0 0 0">
+                                <TextBlock FontSize="15" Padding="0 0" FontFamily="Gadugi" Foreground="#FF3B2048">Стаж</TextBlock>
+                                <TextBox  x:Name="experienceTextBox" PreviewTextInput="experienceTextBox_PreviewTextInput" Width="100" Height="23" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="#FFD9D1D1" BorderBrush="#FF919192"></TextBox>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Margin="10 0 0 0">
+                                <TextBlock FontSize="15" Padding="0 0" FontFamily="Gadugi" Foreground="#FF3B2048">ДТП за последний год</TextBlock>
+                                <TextBox  x:Name="amountOfAccidentsTextBox" PreviewTextInput="amountOfAccidentsTextBox_PreviewTextInput" Width="165" Height="23" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="#FFD9D1D1" BorderBrush="#FF919192"></TextBox>
+
+                            </StackPanel>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0">
+                                <TextBlock FontSize="15" Padding="0 0" FontFamily="Gadugi" Foreground="#FF3B2048">Город регистрации авто</TextBlock>
+                                <ComboBox x:Name="cityCombobox" Style="{DynamicResource ComboBoxStyle1}" MaxDropDownHeight="110" Width="200" Height="23" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="#FFD9D1D1" BorderBrush="#FF919192"></ComboBox>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Margin="10 0 0 0">
+                                <TextBlock FontSize="15" Padding="0 0" FontFamily="Gadugi" Foreground="#FF3B2048">Количество водителей</TextBlock>
+                                <TextBox x:Name="driversTextBox" PreviewTextInput="driversTextBox_PreviewTextInput" Width="190" Height="23" HorizontalAlignment="Left" Margin="0 5 0 20"  Background="#FFD9D1D1" BorderBrush="#FF919192"></TextBox>
+                            </StackPanel>
+
+                        </Grid>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel >
+                                <TextBlock FontSize="15" Padding="0 0" FontFamily="Gadugi" Height="23" Foreground="#FF3B2048"><Run Text="Гос. номер автомобиля"/></TextBlock>
+                                <TextBox x:Name="regnumTextBox" PreviewTextInput="regnumTextBox_PreviewTextInput" Width="250" Height="25"  Background="#FFD9D1D1" BorderBrush="#FF919192"/>
+                            </StackPanel>
+                            <StackPanel VerticalAlignment="Center">
+                                <RadioButton x:Name="osagoBtn" IsChecked="true" Checked="RadioButton_Checked" Content="ОСАГО"/>
+                                <RadioButton x:Name="kaskoBtn" Content="КАСКО"/>
+                            </StackPanel>
+                        </StackPanel>
+
+
+                    </StackPanel>
+                </Border>
+                <TextBlock x:Name="TextBlockNoCarNumber" Foreground="red" Visibility="Hidden" TextWrapping="Wrap" Text="Гос. номер должен быть подобного формата: А000АА000" Margin="327,264,0,5"/>
+
+            </Grid>
+
+            <Grid x:Name="buttonGrid"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="8">
+                <Border Panel.ZIndex="10" CornerRadius="2">
+                    <Button x:Name="calculate" Click="Button_Calculate_Click"  Height="50" Content="Рассчитать" FontSize="20" Background="#FF3FBE82" Foreground="White" FontFamily="Candara Light" Margin="440,25,425,25"/>
+                </Border>
+                <TextBlock x:Name="TextBlockNoDriverInfo" Foreground="red" Visibility="Hidden" TextWrapping="Wrap" Text="Заполните все поля информации о водителе" Margin="362,0,-154,80" FontSize="14"/>
+
+            </Grid>
+          
+        </Grid>
+        <Grid x:Name="totalPriceGrid" Width="400" Height="200" Visibility="Collapsed" Background="#FF3FBEB9" >
+
+            <StackPanel Margin="10 30 10 100" >
+                <TextBlock x:Name="totalPriceTB" HorizontalAlignment="Center" >
+
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 80 0 0">
+                <Border Width="100" Height="50" Margin="40 0 100 0">
+                    <Button FontSize="18" Click="Button_CalculateTotalClose_Click" Background="#FFB54C3F" Margin="0,9,-7,9">Закрыть</Button>
+                </Border>
+                <Border Width="100" Height="50" >
+                    <Button FontSize="18" Click="Button_Buy_Click" Background="#FF3FBE82">Купить</Button>
+                </Border>
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+
+</Page>

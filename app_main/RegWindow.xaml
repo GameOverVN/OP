@@ -1,0 +1,132 @@
+﻿<Page x:Class="app_main.windows.RegWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:app_main.windows"
+        mc:Ignorable="d"
+         Title="Регистрация" Height="500" Width="1000">
+    <Page.Resources>
+
+        <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
+        <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
+        <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
+        <Style x:Key="textBoxInRegWindow" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
+                            <Grid>
+                                <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+
+                                <TextBlock x:Name="placeHolderTB"
+                                           Foreground="Gray"
+                                           Text="Login"
+                                           
+                                           FontSize="20"
+                                           FontFamily="{TemplateBinding FontFamily}"
+                                           Margin="5 0 0 0"
+                                           Visibility="Collapsed">
+
+
+                                </TextBlock>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.Focus.Border}"/>
+                            </Trigger>
+                            <Trigger Property="Text" Value="">
+                                <Setter Property="Visibility" TargetName="placeHolderTB" Value="Visible"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                        <Condition Property="IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+
+    <Grid  Background="#FFA2E0F1">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock  Grid.Column="4" Grid.ColumnSpan="2" FontSize="29" Padding="30 10 0 0" FontFamily="Tahoma" Margin="0,25,0,25" Grid.RowSpan="2">Регистрация</TextBlock>
+        <StackPanel Grid.ColumnSpan="4" Margin="5,42,5,32" Grid.Row="1" Grid.Column="3" Grid.RowSpan="3">
+            <TextBlock TextWrapping="Wrap" Text="Логин" Height="20" FontFamily="Cascadia Code" FontSize="16" Foreground="#FF3B2048"/>
+            <TextBlock  x:Name="TextBlockEmptyLogin" Foreground="Red" Margin="0, 38, 0, 100" Visibility="Hidden" Text="Поле ЛОГИН пустое" Height="19" Width="390"/>
+
+        </StackPanel>
+        <StackPanel Grid.ColumnSpan="4" Margin="5,25,5,0" Grid.Row="3" Grid.Column="3" Grid.RowSpan="2">
+            <TextBlock TextWrapping="Wrap" Text="Пароль" Height="23" FontFamily="Cascadia Code" FontSize="16" Foreground="#FF3B2048"/>
+            <TextBlock  x:Name="TextBlockEmptyPassword" Margin="0, 32, 0, 0" Height="17" Foreground="Red" Visibility="Hidden" Text="Поле ПАРОЛЬ пустое"/>
+
+        </StackPanel>
+        <StackPanel Grid.ColumnSpan="4" Grid.Row="5" Grid.Column="3" Margin="5,5,5,0" Height="75" VerticalAlignment="Top" Grid.RowSpan="2">
+            <TextBlock TextWrapping="Wrap" Text="Повторите пароль" Height="23" FontFamily="Cascadia Code" FontSize="16" Foreground="#FF3B2048"/>
+            <PasswordBox x:Name="password2RegTextbox" Background="White" Height="30" Width="390"  />
+            <TextBlock  x:Name="TextBlockEmptyPassword2" Height="16" Foreground="Red" Visibility="Hidden" Text="Поле ПОВТОРИТЕ ПАРОЛЬ пустое"/>
+
+        </StackPanel>
+
+
+        <Button Grid.Row="7" Grid.Column="3" Background="#FF63A4CF" FontSize="16" FontFamily="Arial" Margin="10,18,10,0" Click="Button_Return_Click">Назад</Button>
+        <Border Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="2" Margin="30,20,10,0">
+            <Button Background="#FF63A4CF" FontSize="16" FontFamily="Arial" Click="Button_CreateAccount_Click" Margin="0,-2,0,0">Создать аккаунт</Button>
+        </Border>
+        <TextBox  x:Name="loginRegTextbox" Background="White" FontSize="20" SelectionTextBrush="#FFE9E2E2" Grid.Column="3" Grid.ColumnSpan="4" Margin="5,15,5,0" Grid.Row="2" />
+        <PasswordBox x:Name="passwordRegTextbox" Background="White" Grid.ColumnSpan="4" Margin="5,0,5,20" Grid.Row="4" Grid.Column="3" />
+        <StackPanel Grid.Column="3" Grid.Row="6" Grid.ColumnSpan="4" Margin="66,13,90,37" Grid.RowSpan="2">
+            <TextBlock x:Name="TextBlockPasswordNotEqual" Foreground="Red" Visibility="Hidden" Text="Пароли не совпадают" Height="25" Width="162" FontSize="16"/>
+
+            <TextBlock x:Name="TextBlockUserAlreadyExist" Foreground="Red" Visibility="Hidden" Text="Пользователь уже существует" Height="25" Width="224" FontSize="16"/>
+
+        </StackPanel>
+
+    </Grid>
+</Page>

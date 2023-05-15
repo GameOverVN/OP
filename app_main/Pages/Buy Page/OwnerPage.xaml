@@ -1,0 +1,84 @@
+﻿<Page x:Class="app_main.Pages.Buy_Page.OwnerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:app_main.Pages.Buy_Page"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="1000"
+      Title="OwnerPage">
+
+    <Grid Background="#FF63A4CF">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Margin="30"  Grid.Row="0" Grid.Column="1"  Grid.ColumnSpan="2" HorizontalAlignment="Left">
+            <StackPanel.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="FontSize" Value="16"></Setter>
+                </Style>
+            </StackPanel.Resources>
+            <Label FontSize="20" FontWeight="Bold" FontFamily="Arial">Страхователь</Label>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock  Padding="10 10 0 0" Foreground="#FF3B2048">Фамилия:</TextBlock>
+                <TextBox x:Name="textBoxSurname" Width="130" Margin="10 13" ></TextBox>
+                <TextBlock  Padding="10 10 0 0" Foreground="#FF3B2048">Имя:</TextBlock>
+                <TextBox x:Name="textBoxName" Width="100" Margin="10 13" ></TextBox>
+                <TextBlock  Padding="10 10 0 0" Foreground="#FF3B2048">Отчество:</TextBlock>
+                <TextBox x:Name="textBoxMiddleName" Width="130" Margin="10 13" ></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+                <StackPanel Orientation="Vertical" Width="170" >
+                    <TextBlock  Padding="10 10 0 0" Foreground="#FF3B2048" >Дата рождения:</TextBlock>
+                    <TextBox x:Name="textBoxAge" Width="134"  Margin="0 10 10 10" ></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Width="226" >
+                    <TextBlock  Padding="10 10 0 0" Foreground="#FF3B2048" >Серия и номер паспорта:</TextBlock>
+                    <TextBox x:Name="textBoxPassport" Width="180"  Margin="0 10 20 10"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Width="230" >
+                    <TextBlock  Padding="10 10 0 0" Foreground="#FF3B2048" >Email:</TextBlock>
+                    <TextBox x:Name="textBoxEmail" Width="210"  Margin="0 10 0 10" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="10">
+                <TextBlock Margin="10" Foreground="#FF3B2048">Адрес регистрации(город, улица, дом, квартира)</TextBlock>
+                <TextBox x:Name="adressTextBox" FontSize="16"></TextBox>
+            </StackPanel>
+
+
+        </StackPanel>
+        <Grid Grid.Row="1" Grid.Column="1" Margin="0,30,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60*"></ColumnDefinition>
+                <ColumnDefinition Width="82*"/>
+                <ColumnDefinition Width="429*"></ColumnDefinition>
+                <ColumnDefinition Width="143*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Border Width="40" Height="40" Grid.ColumnSpan="2" Margin="51,15,52,15"/>
+            <Border Grid.Column="3" Width="80" Height="40" Margin="32,15,31,15">
+                <Button FontSize="16" Background="#FF3FBE82" Click="Button_NextPage_Click">Далее</Button>
+            </Border>
+            <Button Content="v"  FontSize="30"   RenderTransformOrigin="0.5,0.5" Click="Button_PreviousPage_Click" Height="50" Margin="13,12,22,8" Width="47" Grid.Column="1">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.305"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>

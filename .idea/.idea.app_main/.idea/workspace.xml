@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="593f8828-4585-47d9-95ec-7504cdec67c8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.vs/app_main/FileContentIndex/3e4c3670-9b8b-49f0-96a5-32263dafa2d2.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/app_main/FileContentIndex/b9af5dc1-5cc8-49bb-a9d5-933eca552d06.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/app_main/FileContentIndex/e76013af-0959-4c4b-bc4e-abce33b4a080.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/app_main/FileContentIndex/ecd2c50f-ab71-480f-8416-bf53075015bb.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/app_main/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/app_main/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/AdminWindow.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/app_main/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/Pages/Auth and Reg/AuthPage.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/Pages/Buy Page/DriverPage.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/Pages/Buy Page/OwnerPage.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/Pages/Buy Page/carPage.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/Pages/Buy Page/mainBuyPage.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/Pages/BuyPage.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/Pages/CalculatePage.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/Pages/DataChangePage.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/Pages/UsersControl.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/RegWindow.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/UserWindow.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/app_main.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/app_main/obj/Debug/app_main.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/app_main_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/app_main/obj/Debug/app_main_MarkupCompile.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/app_main_MarkupCompile.lref" beforeDir="false" afterPath="$PROJECT_DIR$/app_main/obj/Debug/app_main_MarkupCompile.lref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/deleteUserFromDG.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_main/obj/Debug/windows/MainWindow.baml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="2PA60eF7pTA8lvb1JdeEX0xjXvX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <created>1682887319617</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682887319617</updated>
+      <workItem from="1682887326042" duration="1000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
