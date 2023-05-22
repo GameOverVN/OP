@@ -53,7 +53,7 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="2" Grid.ColumnSpan="4"   FontSize="29" Padding="30 10 0 0" FontFamily="Tahoma" RenderTransformOrigin="0.5,0.564" Margin="0,56,0,0" Grid.RowSpan="2">Авторизация</TextBlock>
+        <TextBlock Grid.Column="2" Grid.ColumnSpan="4"   FontSize="29" Padding="30 10 0 0" FontFamily="Tahoma" RenderTransformOrigin="0.5,0.564" Margin="0,10,0,46" Grid.RowSpan="2" Grid.Row="1" Foreground="{DynamicResource MaterialDesignLightForeground}">Авторизация</TextBlock>
         <StackPanel Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="4" Margin="30,0,30,0">
             <TextBox x:Name="loginTextbox" FontSize="18" Height="32" Background="White" />
             <TextBlock x:Name="TextBlockEmptyLogin" Height="15" Foreground="red" Visibility="Hidden"><Run Text="Поле логин пустое"/></TextBlock>
@@ -69,10 +69,28 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Border Grid.Row="0"  Margin="0 0 35 0"  Width="100" Height="30" Grid.Column="0">
-                <Button Style="{DynamicResource ButtonStyleAuthEnter}" Background="#FF63A4CF" FontSize="16" FontFamily="Consolas" Click="Button_Auth_Click" Margin="0,0,0,-2">Войти</Button>
+                <Button Style="{DynamicResource ButtonStyleAuthEnter}" Background="#FF63A4CF" FontSize="16" FontFamily="Consolas" Click="Button_Auth_Click" Margin="0,0,0,-2" Foreground="White" RenderTransformOrigin="0.5,0.5">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="{DynamicResource PopupContentPresenterExtend}" Y="{DynamicResource PopupContentPresenterExtend}"/>
+                        </TransformGroup>
+                    </Button.RenderTransform> Войти
+                </Button>
             </Border>
-            <Border Grid.Column="1" Margin="30 0 0 0"  Width="100" Height="30">
-                <Button Style="{DynamicResource ButtonStyleAuthReg}" Background="#FF63A4CF" FontSize="16" FontFamily="Consolas" Click="Button_Reg_Click" Margin="-13,0,-23,-2">Регистрация</Button>
+            <Border Grid.Column="1" Margin="30 0 0 0"  Width="100" Height="30" >
+                <Button Style="{DynamicResource ButtonStyleAuthEnter}" Background="#FF63A4CF"  FontSize="16" FontFamily="Consolas" Click="Button_Reg_Click" Margin="-13,0,-23,-2" Foreground="White" RenderTransformOrigin="0.5,0.5">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="{DynamicResource PopupContentPresenterExtend}" Y="{DynamicResource PopupContentPresenterExtend}"/>
+                        </TransformGroup>
+                    </Button.RenderTransform> Регистрация
+                </Button>
             </Border>
         </Grid>
         <TextBlock Padding="10 " FontSize="16" RenderTransformOrigin="0.5,0.506" Grid.Column="2" Grid.ColumnSpan="4" Margin="20,24,30,56" Grid.Row="2" Grid.RowSpan="2" FontFamily="Cascadia Code" Foreground="#FF3B2048"><Run Text="Логин"/></TextBlock>
@@ -81,6 +99,7 @@
         <StackPanel Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" Margin="30,56,10,28" Grid.RowSpan="2">
             <TextBlock x:Name="TextBlockNoUser" Foreground="red" Visibility="Hidden" RenderTransformOrigin="0.502,0.542" Grid.Column="2" Grid.ColumnSpan="4" Grid.Row="5" FontSize="16" Height="29"><Run Text="Пользователя не существует"/></TextBlock>
         </StackPanel>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="63,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="632" FontSize="36" FontFamily="{DynamicResource MaterialDesignFont}" TextAlignment="Center" Grid.ColumnSpan="6" Foreground="{DynamicResource MaterialDesignColumnHeader}" FontWeight="Bold"><Run Language="ru-ru" Text="Страхование автомобилей"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
 
     </Grid>
 </Page>
