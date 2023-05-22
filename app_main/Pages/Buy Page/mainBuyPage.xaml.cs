@@ -37,9 +37,9 @@ namespace app_main.Pages.Buy_Page {
             initInfoAbout();
         }
         private void initInfoAbout() {
-            textBlockDriver.Text = $"{OwnerPage.textBoxName.Text} {OwnerPage.textBoxSurname.Text} {OwnerPage.textBoxMiddleName.Text}, дата рождения: {OwnerPage.textBoxAge.Text}";
+            textBlockDriver.Text = $"{OwnerPage.textBoxName.Text} {OwnerPage.textBoxSurname.Text} {OwnerPage.textBoxMiddleName.Text}, дата рождения: {OwnerPage.textBoxAge.Text} г.";
             textBlockDriver.FontSize = 16;
-            textBlockPrice.Text = CalculatePage.Price.ToString();
+            textBlockPrice.Text = $" {CalculatePage.Price} руб.";
             textBlockPrice.FontSize = 16;
         }
         private void Button_PreviousPage_Click(object sender, RoutedEventArgs e) {
@@ -67,7 +67,7 @@ namespace app_main.Pages.Buy_Page {
 
             Paragraph paragraphMain = new Paragraph("Страхователь:", font);
             Paragraph paragraphName = new Paragraph(str, font);
-            Paragraph paragraphPassport = new Paragraph($"Паспорт: {OwnerPage.getPassport()}. Водительское удостоверение: {123}", font);
+            Paragraph paragraphPassport = new Paragraph($"Паспорт: {OwnerPage.getPassport()}. Водительское удостоверение: {OwnerPage.driverPage.getCarPassort()}", font);
             Paragraph paragraphPrice = new Paragraph($"Стоимость страховки: {textBlockPrice.Text}. Оплачено при помощи карты VISA. Электронный чек отправлен на {OwnerPage.getEmail()}", font);
             Paragraph paragraphTime = new Paragraph($"Начало действия страховки: {DateTime}. Страховка действует до {DateTime.AddYears(1)}", font);
             PdfContentByte cb = writer.DirectContent;

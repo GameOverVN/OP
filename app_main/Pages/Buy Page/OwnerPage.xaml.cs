@@ -71,13 +71,7 @@ namespace app_main.Pages.Buy_Page {
             }
             return null;
         }
-        public string getAdress() {
-            if (adressTextBox.Text!="") {
-                return adressTextBox.Text;
-
-            }
-            return null;
-        }
+       
 
 
         private void Button_PreviousPage_Click(object sender, RoutedEventArgs e) {
@@ -88,7 +82,7 @@ namespace app_main.Pages.Buy_Page {
         }
 
         private void Button_NextPage_Click(object sender, RoutedEventArgs e) {
-            if(getPassport() == null && getEmail() == null && getAdress() == null)
+            if(getPassport() == null && getEmail() == null)
             {
                 CustomMessageBox messageBox = new CustomMessageBox("Заполните все поля");
                 messageBox.Show();

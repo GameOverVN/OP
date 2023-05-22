@@ -75,10 +75,7 @@
                     <TextBox x:Name="textBoxEmail" Width="210"  Margin="0 10 0 10" />
                 </StackPanel>
             </StackPanel>
-            <StackPanel Margin="10">
-                <TextBlock Margin="10" Foreground="#FF3B2048">Адрес регистрации(город, улица, дом, квартира)</TextBlock>
-                <TextBox x:Name="adressTextBox" FontSize="16"></TextBox>
-            </StackPanel>
+            
 
 
         </StackPanel>

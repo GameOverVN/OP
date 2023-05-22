@@ -2,6 +2,7 @@
 using app_main.windows;
 using OfficeOpenXml;
 using Org.BouncyCastle.Asn1.Crmf;
+using Org.BouncyCastle.Utilities.Collections;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -34,7 +35,7 @@ namespace app_main.Pages
             initComboBox();
 
         }
-        public static string filePathGlobal = ExcelLoader.filePathBokov;
+        public static string filePathGlobal = ExcelLoader.filePathSenin;
 
         public List<Car> cars = getCars();
         private void Button_Calculate_Click(object sender, RoutedEventArgs e)
@@ -161,7 +162,7 @@ namespace app_main.Pages
 
         private void brandComboboxIndexChanged(object sender, SelectionChangedEventArgs e)
         {
-            List<string> carModels = new List<string>();
+            HashSet<string> carModels = new HashSet<string>();
 
             modelCombobox.Items.Clear();
             string selectedBrand = brandCombobox.SelectedItem.ToString();
@@ -176,7 +177,6 @@ namespace app_main.Pages
                     continue;
                 }
             }
-            carModels.Sort();
             foreach (var model in carModels)
             {
                 modelCombobox.Items.Add(model);
@@ -193,18 +193,22 @@ namespace app_main.Pages
             }
             else
             {
-
+                HashSet<double> powers = new HashSet<double>();
                 string selectedModel = modelCombobox.SelectedItem.ToString();
                 foreach (var car in cars)
                 {
                     if (car.Model == selectedModel && car.Brand == brandCombobox.SelectedItem.ToString())
                     {
-                        powerCombobox.Items.Add(car.Power);
+                        powers.Add(car.Power);
                     }
                     else
                     {
                         continue;
                     }
+                }
+                foreach(var power in powers) {
+                    powerCombobox.Items.Add(power);
+
                 }
             }
             powerCombobox.SelectionChanged += powerComboboxIndexChanged;

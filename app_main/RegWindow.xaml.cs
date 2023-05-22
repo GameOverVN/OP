@@ -162,6 +162,7 @@ namespace app_main.windows
                     excelLoader.SetUserToExcel(newUser);
                     CustomMessageBox messageBox = new CustomMessageBox("Пользователь создан");
                     messageBox.Show();
+                    mainWindow.OpenPage(MainWindow.pages.login);
 
                 }
             }

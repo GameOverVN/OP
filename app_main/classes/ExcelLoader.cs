@@ -50,7 +50,7 @@ namespace app_main.classes {
             if (file.Exists) { file.Delete(); }
         }
         public void SetUserToExcel(User newUser) {
-            FileInfo filePath = new FileInfo(@"C:\Code\Praktika\excelTables\Users.xlsx");
+            FileInfo filePath = new FileInfo($"{filePathSenin}Users.xlsx");
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;                                                                                                             
             using (ExcelPackage userPackage = new ExcelPackage(filePath)) {
 
@@ -67,7 +67,7 @@ namespace app_main.classes {
 
         }
         public void SetUsersToExcel(ObservableCollection<User> users) {
-            FileInfo filePath = new FileInfo(@"C:\Users\User\Desktop\bmstu\1.2\praktika_program\app_main\excelTables\Users.xlsx");
+            FileInfo filePath = new FileInfo($"{filePathSenin}Users.xlsx");
             deleteIfExists(filePath);
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             using (ExcelPackage userPackage = new ExcelPackage(filePath)) {
