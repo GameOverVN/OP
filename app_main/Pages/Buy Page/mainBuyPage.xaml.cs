@@ -61,7 +61,7 @@ namespace app_main.Pages.Buy_Page {
             var font = new iTextSharp.text.Font(baseFont, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL);
             string fileName = $"{OwnerPage.textBoxSurname.Text}{OwnerPage.textBoxName.Text}{OwnerPage.textBoxMiddleName.Text}";
             Document document = new Document();
-            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream($"C:\\Code\\Praktika\\pdfDocuments\\{fileName}.pdf", FileMode.OpenOrCreate));
+            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream($"C:\\Code\\Praktika_Finalochkka\\pdfDocuments\\{fileName}.pdf", FileMode.OpenOrCreate));
             document.Open();
             string str = $"{OwnerPage.textBoxSurname.Text} {OwnerPage.textBoxName.Text} {OwnerPage.textBoxMiddleName.Text}, дата рождения: {OwnerPage.textBoxAge.Text}";
 

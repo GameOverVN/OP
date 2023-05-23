@@ -35,7 +35,7 @@ namespace app_main.Pages
             initComboBox();
 
         }
-        public static string filePathGlobal = ExcelLoader.filePathSenin;
+        public static string filePathGlobal = ExcelLoader.filePathBokov;
 
         public List<Car> cars = getCars();
         private void Button_Calculate_Click(object sender, RoutedEventArgs e)

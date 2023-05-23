@@ -30,6 +30,17 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="ButtonStyleAprove" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="#FF63A4CF" BorderThickness="1" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" Margin="{TemplateBinding Padding}" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Page.Resources>
 
     <Grid Background="#FFA2E0F1">
@@ -51,7 +62,7 @@
                 <TextBlock FontSize="23" FontFamily="Arial">Базовый тариф</TextBlock>
                 <TextBlock x:Name="TextBlockRatio" Width="120" Margin="30 0 0 0" IsEnabled="False"  FontSize="25"></TextBlock>
                 <TextBox x:Name="textBoxChangeRatio" Background="LightGray"  Width="120" Margin="0 0 40 0" Visibility="Collapsed"></TextBox>
-                <Button x:Name="buttonConfirm"  Click="ConfirmChangeRatio" Margin="0 0 20 0" Visibility="Collapsed">Подтвердить</Button>
+                <Button Style="{DynamicResource ButtonStyleAprove}" x:Name="buttonConfirm"  Click="ConfirmChangeRatio" Margin="0 0 20 0" Visibility="Collapsed">Подтвердить</Button>
                 <Button Style="{DynamicResource ButtonStyleDataChange}"  Click="Button_ChangeBasicRatio_Click" Height="27">Изменить</Button>
             </StackPanel>
             <DataGrid x:Name="dataGridCities" Visibility="Collapsed">

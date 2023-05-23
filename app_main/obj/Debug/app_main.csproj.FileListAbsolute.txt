@@ -347,3 +347,93 @@ C:\Users\User\Desktop\sdfsdfsdf\app_main\obj\Debug\app_main.csproj.CoreCompileIn
 C:\Users\User\Desktop\sdfsdfsdf\app_main\obj\Debug\app_main.csproj.CopyComplete
 C:\Users\User\Desktop\sdfsdfsdf\app_main\obj\Debug\app_main.exe
 C:\Users\User\Desktop\sdfsdfsdf\app_main\obj\Debug\app_main.pdb
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\app_main.exe.config
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\app_main.exe
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\app_main.pdb
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\BitMiracle.LibTiff.NET.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\BouncyCastle.Crypto.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\EPPlus.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\EPPlus.Interfaces.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\EPPlus.System.Drawing.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\IronSoftware.Drawing.Common.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\IronXL.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\itextsharp.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\MaterialDesignColors.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\PdfSharp.Charting.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\PdfSharp.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\SixLabors.ImageSharp.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\System.Buffers.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\System.Memory.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\System.Numerics.Vectors.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\BitMiracle.LibTiff.NET.xml
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\EPPlus.xml
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\IronSoftware.Drawing.Common.pdb
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\IronSoftware.Drawing.Common.xml
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\IronXL.pdb
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\IronXL.xml
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\IronXL.dll.config
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\itextsharp.xml
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\MaterialDesignColors.pdb
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\PdfSharp.xml
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\PdfSharp.Charting.xml
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\SixLabors.ImageSharp.xml
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\System.Buffers.xml
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\System.Memory.xml
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\System.Numerics.Vectors.xml
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\System.Text.Encoding.CodePages.xml
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\de\PdfSharp.resources.dll
+C:\Code\Praktika_Finalochkka\app_main\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\app_main.csproj.AssemblyReference.cache
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\app_main.csproj.SuggestedBindingRedirects.cache
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\AdminWindow.g.cs
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\CustomMessageBox.g.cs
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\windows\MainWindow.g.cs
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\deleteUserFromDG.g.cs
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\Auth and Reg\AuthPage.g.cs
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\Buy Page\DriverPage.g.cs
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\Buy Page\mainBuyPage.g.cs
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\Buy Page\OwnerPage.g.cs
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\BuyPage.g.cs
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\Buy Page\carPage.g.cs
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\CalculatePage.g.cs
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\DataChangePage.g.cs
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\UsersControl.g.cs
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\RegWindow.g.cs
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\UserWindow.g.cs
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\windows\App.g.cs
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\app_main_MarkupCompile.cache
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\app_main_MarkupCompile.lref
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\windows\App.baml
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\AdminWindow.baml
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\CustomMessageBox.baml
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\windows\MainWindow.baml
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\deleteUserFromDG.baml
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\Auth and Reg\AuthPage.baml
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\Buy Page\DriverPage.baml
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\Buy Page\mainBuyPage.baml
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\Buy Page\OwnerPage.baml
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\BuyPage.baml
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\Buy Page\carPage.baml
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\CalculatePage.baml
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\DataChangePage.baml
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\Pages\UsersControl.baml
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\RegWindow.baml
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\UserWindow.baml
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\app_main.g.resources
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\app_main.Properties.Resources.resources
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\app_main.csproj.GenerateResource.cache
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\app_main.csproj.CoreCompileInputs.cache
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\app_main.csproj.CopyComplete
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\app_main.exe
+C:\Code\Praktika_Finalochkka\app_main\obj\Debug\app_main.pdb

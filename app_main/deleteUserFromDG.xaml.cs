@@ -35,7 +35,8 @@ namespace app_main {
         private void deleteUserFromBD(object sender, RoutedEventArgs e) {
             var users = MainWindow.getUsers();
             if (idTextBox.Text=="") {
-                MessageBox.Show("Заполните поле");
+                CustomMessageBox messageBox = new CustomMessageBox("Заполните поле");
+                messageBox.Show();
             }
             else {
 
@@ -53,14 +54,16 @@ namespace app_main {
                         }
                         catch (Exception ex) {
 
-                            MessageBox.Show(ex.Message);
-                        }
+                                CustomMessageBox messageBox = new CustomMessageBox(ex.Message);
+                                messageBox.Show();
+                            }
                     }
                 }
             }
             else {
-                MessageBox.Show("Указанный пользователь не найден");
-            }
+                    CustomMessageBox messageBox = new CustomMessageBox("Указанный пользователь не найден");
+                    messageBox.Show();
+                }
 
             ExcelLoader excelLoader = new ExcelLoader();
             excelLoader.SetUsersToExcel(users);
